@@ -1,0 +1,389 @@
+/* Base body styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1E1E1E; 
+  color: #ffffff; 
+}
+
+
+/* Enable smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+/* Footer styles */
+footer {
+  background-color: #121212;
+  color: #cfcfcf; 
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Make main content fill available vertical space */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Gallery section styles */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+  max-width: 1000px;        
+  margin: 0 auto;    
+}
+
+/* Individual gallery item styles */
+.gallery-item {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;   
+  background-color: #0f0f10;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+/* Gallery item hover effect */
+.gallery-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0,123,255,0.35);
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.25);
+}
+
+/* Image container for gallery */
+.media {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gallery images */
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;      
+  display: block;
+}
+
+/* Text section for gallery items */
+.gallery-text {
+  padding: 16px 18px;
+  color: #cfcfcf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Gallery item title */
+.gallery-text h3 {
+  margin: 0;
+  color: #007BFF;           
+  font-size: 1.05rem;
+}
+
+/* Gallery item description */
+.gallery-text p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+/* Alternate layout for gallery items */
+.gallery-item:nth-child(even) .media { order: 2; }
+.gallery-item:nth-child(odd) .gallery-text { order: 1; }
+
+
+
+
+
+/* Course Outline section styles */
+.course-outline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;     
+  margin: 0 auto;
+}
+
+/* Individual term box styles */
+.term-box {
+  background-color: #0f0f10;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color .2s ease;
+}
+
+/* Images for each term box */
+.term-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Term title styles */
+.term-box h3 {
+  margin: 12px 12px 6px;
+  font-size: 20px;
+  color: #007BFF;
+}
+
+/* Term description styles */
+.term-box p {
+  margin: 0 12px 14px;
+  font-size: 15px;
+  color: #cfcfcf;
+  line-height: 1.5;
+}
+
+/* Term box hover effect */
+.term-box:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0,123,255,0.4);
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.3);
+}
+
+
+
+/* --- Uiverse.io hamburger menu styles --- */
+#checkbox2 {
+  display: none;
+}
+
+/* Hamburger toggle button styles */
+.toggle2 {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition-duration: .5s;
+}
+
+/* Hamburger bar styles */
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(92, 176, 255);
+  border-radius: 6px;
+}
+
+/* Middle bar transition */
+#bar5 {
+  transition-duration: .8s;
+}
+
+/* Top and bottom bar width */
+#bar4, #bar6 {
+  width: 80%;
+}
+
+/* Hamburger animation when checked */
+#checkbox2:checked + .toggle2 .bars {
+  position: absolute;
+  transition-duration: .5s;
+}
+
+/* Hide middle bar when checked */
+#checkbox2:checked + .toggle2 #bar5 {
+  transform: scaleX(0);
+  transition-duration: .5s;
+}
+
+/* Rotate top bar when checked */
+#checkbox2:checked + .toggle2 #bar4 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}
+
+/* Rotate bottom bar when checked */
+#checkbox2:checked + .toggle2 #bar6 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+
+/* Rotate toggle button when checked */
+#checkbox2:checked + .toggle2 {
+  transition-duration: .5s;
+  transform: rotate(180deg);
+}
+
+/* Navigation bar styles */
+.site-nav {
+  background-color: #121212;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand/logo styles in nav */
+.nav-brand {
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* Individual navigation link styles */
+.nav-links a {
+  background-color: #1E1E1E;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Navigation link hover effect */
+.nav-links a:hover {
+  background-color: #007BFF;
+}
+
+
+/* Responsive styles for navigation bar */
+@media (max-width: 700px) {
+  .toggle2 {
+    display: flex; 
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #121212;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    left: 0;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  #checkbox2:checked ~ .nav-links {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+a.slice:active { transform: scale(0.98); filter: brightness(0.9); }
+/* From Uiverse.io by nikk7007: Button styles for home page */
+a.slice {
+  --c1: #1E1E1E;     
+  --c2: #007BFF;     
+  --size-letter: 18px;
+
+  display: inline-flex;              
+  align-items: center;
+  justify-content: center;
+  padding: 0.55em 1.1em;
+  font-size: var(--size-letter);
+  line-height: 1;
+  background: transparent;
+  border: calc(var(--size-letter) / 6) solid var(--c2);
+  border-radius: 0.35em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;                  
+  text-decoration: none;             
+  transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+a.slice .text {
+  font-weight: 700;
+  color: var(--c2);
+  position: relative;
+  z-index: 1;
+  transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+a.slice::after {
+  content: "";
+  width: 0;
+  height: 0; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  background: var(--c2);
+  transition: all 700ms cubic-bezier(0.83, 0, 0.17, 1);
+  z-index: 0;
+}
+
+a.slice:hover::after {
+  width: 160%; 
+  height: 300%; 
+}
+
+a.slice:hover .text { color: var(--c1); }
+a.slice:hover::after { width: 130%; }
+a.slice:active { transform: scale(0.98); filter: brightness(0.9); }
+
+.home-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px; 
+}
+
+
+
+/* Brand/logo link styles in nav */
+.nav-brand a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Brand/logo link hover effect */
+.nav-brand a:hover {
+  color: #007BFF;
+}
+
+
+
+
+/* Shared section container styles */
+.section,
+.gallery,
+.course-outline {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
