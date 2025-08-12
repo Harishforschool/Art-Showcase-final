@@ -1,2 +1,2 @@
 # Art-Showcase-final
-The Saint Kentigern Art showcase website
+This website is the SKC art showcase final version. 
